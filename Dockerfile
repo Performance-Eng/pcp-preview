@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM fedora:42
 
 RUN dnf install -y --setopt=tsflags=nodocs \
 	redis grafana-pcp pcp-zeroconf \
