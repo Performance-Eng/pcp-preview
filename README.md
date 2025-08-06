@@ -1,6 +1,5 @@
 # Performance Co-Pilot Preview Container
 
-[![Docker Repository on Quay](https://quay.io/repository/performancecopilot/pcp-preview/status "Docker Repository on Quay")](https://quay.io/repository/performancecopilot/pcp-preview)
 
 This container contains a preview of modern Performance Co-Pilot features
 as an all-in-one container.  It includes the following components:
@@ -13,12 +12,12 @@ as an all-in-one container.  It includes the following components:
 ## Run container
 ### Podman
 ```
-sudo -H podman run -d --privileged -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -p 3000:3000 quay.io/performancecopilot/pcp-preview
+sudo -H podman run --name pcp-container -d --privileged -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -p 3000:3000 ghcr.io/performance-eng/pcp-preview:latest
 ```
 
 ### Docker
 ```
-sudo -H docker run -d --privileged -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -p 3000:3000 quay.io/performancecopilot/pcp-preview
+sudo -H docker run --name pcp-container -d --privileged -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -p 3000:3000 ghcr.io/performance-eng/pcp-preview:latest
 ```
 ## Services
 
